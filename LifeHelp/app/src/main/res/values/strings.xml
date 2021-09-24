@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">LifeHelp</string>
+    <string name="sexo">Sexo:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Deslogar">Deslogar</string>
+    <string name="Senha">a senha deve ter 7 Nmr</string>
+    <string name="senha">a senha deve ter 6 Nmr</string>
+
+
+    <string name="Nome1">Caue Guilherme</string>
+    <string name="idade1">17</string>
+    <string name="telefone1">123 </string>
+
+    <string name="Nome2">Gabriel Michels</string>
+    <string name="idade2">18</string>
+    <string name="telefone2">1234</string>
+
+</resources>

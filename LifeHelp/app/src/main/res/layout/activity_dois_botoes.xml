@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_so_o_drip_absurdo"
+    android:gravity="center"
+    tools:context=".DoisBotoes">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:text="Logar como:"
+        android:textColor="#0A4230"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonProf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titulo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginRight="70dp"
+        android:text="Profissional"
+        android:textColor="#0A4230"
+        android:textStyle="bold"
+        app:backgroundTint="#3EFFFFFF"
+        app:cornerRadius="30dp"
+        app:strokeColor="#0A4230"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/buttonUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonProf"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="71dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginRight="69dp"
+        android:text="Usuario"
+        android:textColor="#0A4230"
+        android:textStyle="bold"
+        app:backgroundTint="#3EFFFFFF"
+        app:cornerRadius="30dp"
+        app:strokeColor="#0A4230"
+        app:strokeWidth="2dp"
+        />
+
+</RelativeLayout>

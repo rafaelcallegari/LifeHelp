@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1060659040810",
+    "project_id": "bancolifehelp",
+    "storage_bucket": "bancolifehelp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1060659040810:android:404909b79be84547a02953",
+        "android_client_info": {
+          "package_name": "com.example.lifehelp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1060659040810-12spugt6apc4pj0p9dop18jot5uliadi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lifehelp",
+            "certificate_hash": "ed216991c61d8e86775751b1b7785219cea90b6a"
+          }
+        },
+        {
+          "client_id": "1060659040810-hhqhqtge071raei9qm7g5ttmql0jao2n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQwT7Ln5vBzMik72yJArDB2sjQkJLmUys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1060659040810-hhqhqtge071raei9qm7g5ttmql0jao2n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
