@@ -9,8 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LifeHelp">
-        <activity android:name=".activity_perfil"></activity>
-        <activity android:name=".ProfissionalLista" />
+        <activity android:name=".especialidades.ListaCuidador"></activity>
+        <activity android:name=".especialidades.ListaPsico" />
+        <activity android:name=".especialidades.ListaEnfermeiro" />
+        <activity android:name=".especialidades.ListaFisio" />
+        <activity android:name=".PerfilLista" />
+        <activity android:name=".especialidades.ListaProfissional" />
         <activity android:name=".PerfilProf" />
         <activity android:name=".PerfilUsuario" />
         <activity android:name=".Perdemo_usuario" />

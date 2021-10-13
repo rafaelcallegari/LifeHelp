@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".activity_perfil">
+    android:background="@drawable/bg_altos_lh"
+    tools:context=".PerfilLista">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -21,11 +22,12 @@
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="177dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="10dp"
+            android:layout_height="85dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="1dp"
             android:layout_weight="1"
-            tools:srcCompat="@tools:sample/avatars" />
+            app:srcCompat="@drawable/ic_baseline_account_circle_24"
+            tools:ignore="VectorDrawableCompat" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -46,7 +48,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Dados do Profissional" />
+                    android:text="Dados do Profissional"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold|italic" />
 
             </LinearLayout>
 
@@ -61,12 +65,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Nome:" />
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold|italic"
+                    android:text="Especialidade:" />
 
                 <TextView
-                    android:id="@+id/txt_Nome"
+                    android:id="@+id/txt_NomePerfil"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold|italic"
                     android:layout_weight="1" />
             </LinearLayout>
 
@@ -80,13 +88,17 @@
                     android:id="@+id/textView15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold|italic"
                     android:layout_weight="1"
-                    android:text="Idade:" />
+                    android:text="Nome:" />
 
                 <TextView
-                    android:id="@+id/txt_idade"
+                    android:id="@+id/txt_idadePerfil"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold|italic"
                     android:layout_weight="1" />
             </LinearLayout>
 
@@ -100,13 +112,17 @@
                     android:id="@+id/textView17"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold|italic"
                     android:layout_weight="1"
                     android:text="Telefone:" />
 
                 <TextView
-                    android:id="@+id/txt_telefone"
+                    android:id="@+id/txt_telefonePerfil"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold|italic"
                     android:layout_weight="1" />
             </LinearLayout>
 
@@ -147,6 +163,7 @@
             android:layout_weight="1"
             android:text="Enviar SMS"
             android:textColor="#000000"
+            android:textStyle="bold|italic"
             app:backgroundTint="#FFFFFF" />
 
         <Button
@@ -156,8 +173,9 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:textColor="#000000"
+            android:textStyle="bold|italic"
             app:backgroundTint="#FFFFFF"
-            tools:text="ZAP" />
+            tools:text="Whatsapp" />
 
     </LinearLayout>
 
@@ -175,17 +193,24 @@
             android:id="@+id/ratingBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp" />
+            android:isIndicator="false"
+            android:layout_margin="20dp"
+            android:background="#4B8BC34A" />
 
         <TextView
             android:id="@+id/txt_comentarios"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="comentarios"
+            android:gravity="center"
+            android:textColorHint="#FFFFFF"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold|italic"
             android:layout_margin="20dp" />
     </LinearLayout>
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/btn_contratar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"

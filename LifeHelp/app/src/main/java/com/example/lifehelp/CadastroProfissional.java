@@ -1,16 +1,22 @@
 package com.example.lifehelp;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
@@ -28,20 +34,23 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
 
 public class CadastroProfissional extends AppCompatActivity {
 
-     Button btn_limparProf, btn_confirProf;
-     EditText edt_NomeProf, edt_EspecialidadeProf, edt_EmailProf, edt_SenhaProf, edt_cadastroSenhaProf, edt_CpfProf;
-     RadioButton rb_MasculinoProf, rb_FemininoProf;
+    Button btn_limparProf, btn_confirProf, btnFoto;
+    EditText edt_NomeProf, edt_EspecialidadeProf, edt_EmailProf, edt_SenhaProf, edt_cadastroSenhaProf, edt_CpfProf;
+    RadioButton rb_MasculinoProf, rb_FemininoProf;
+    ImageView img_foto;
+
 
     String ProfId;
     String[] mensagens = {"Preencha todos os campos", "Cadastro realizado com sucesso"};
 
-
+    private Uri SelectedUri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +59,9 @@ public class CadastroProfissional extends AppCompatActivity {
 
         btn_confirProf = findViewById(R.id.btn_confirProf);
         btn_limparProf = findViewById(R.id.btn_limparProf);
+        btnFoto = findViewById(R.id.btn_Foto);
+
+        img_foto = findViewById(R.id.img_foto);
 
         edt_cadastroSenhaProf = findViewById(R.id.edt_cadastroSenhaProf);
         edt_EmailProf = findViewById(R.id.edt_EmailProf);
@@ -77,6 +89,13 @@ public class CadastroProfissional extends AppCompatActivity {
                 } else {
                     CadastrarProf(v);
                 }
+            }
+        });
+
+        btnFoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectedFoto();
             }
         });
 
@@ -161,8 +180,31 @@ public class CadastroProfissional extends AppCompatActivity {
                         Log.d("db_error", "Erro ao salvar os dados" + e.toString());
                     }
                 });
+    }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
 
+        if (requestCode == 0) {
+            SelectedUri = data.getData();
+
+            Bitmap bitmap = null;
+            try {
+                bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), SelectedUri);
+                img_foto.setImageDrawable(new BitmapDrawable(bitmap));
+                btnFoto.setAlpha(0);
+            }
+            catch (IOException e) {
+
+            }
+        }
+    }
+
+    private void selectedFoto() {
+        Intent intent = new Intent(Intent.ACTION_PICK);
+        intent.setType("image/*");
+        startActivityForResult(intent,0);
     }
 
 }
